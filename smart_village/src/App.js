@@ -1,19 +1,17 @@
 import './App.css';
-import Home from './coponents/Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
     return (
         <div className="App">
-            <Home/>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
-            <div> sdsanodksna</div>
+            <Navbar/>
+            <Hero/>
+            <About/>
+            <Footer/>
         </div>
     );
 }

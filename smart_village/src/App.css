@@ -1,60 +1,134 @@
 html {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+    background-color: var(--white-smoke-color);
 }
 
 a {
     text-decoration: none;
+    color: var(--black-color);
+}
+
+li {
+    list-style: none;
 }
 
 .App {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Poppins';
     padding: 0;
     margin: 0;
     overflow: hidden;
+    background-color: var(--white-smoke-color);
 }
 
 :root {
-    --first-color: black;
-    --second-color: white;
+    --black-color: rgb(31, 36, 43);
+    --white-color: rgb(249, 250, 251);
+    --white-smoke-color: #DCDFE4;
+    --django-green-color: #66b58e;
 }
 
-.navbar{
+.h1 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.landingPage {
+    width: 100vw;
+    height: 100vh;
+    /* font-family: 'Source Sans Pro'; */
+    display: flex;
+    flex-direction: row;
+
+}
+
+.navbar {
     width: 100vw;
     height: 7vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--second-color);
-    color: var(--first-color);
-    
+    background-color: var(--white-smoke-color);
+    color: var(--black-color);
+    font-size: 20px;
 
     .logo {
-        font-weight: bold;
+        font-weight: 600;
     }
     .container {
-        background-color: var(--second-color);
+        background-color: var(--white-color);
         display: flex;
-
     }
     .nav-menu {
+        color: var(--black-color);
         display: flex;
         align-items: center;
-        gap: 3rem;
+        gap: 5vw;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .nav-menu > a {
+        color: var(--black-color);
+        font-weight: 400;
     }
 
     .button {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+        flex-direction: row;
+        gap: 1vw;
+        font-size: 13px;
+        
+        .login {
+            border: 1px solid transparent;
+            background: transparent;
+            width: 6rem;
+            height: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 600;
+            cursor: pointer;
+        }
 
+        .register {
+            border: 1px solid var(--white-color);
+            background-color: var(--black-color);
+            color: var(--white-color);
+            width: 6rem;
+            height: 2.5rem;
+            border-radius: 20px;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            text-align: center;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .register:hover {
+            color: black;
+            border: 1px solid black;
+            background-color: #ffffff;
+            font-weight: 600;
+            transform: translateY(-1px);
+        }
+    }
 }
 
 .home {
-    background-image: url("/Users/matthewchristiansusanto/Desktop/React/SmartVillage/smart_village/src/images/gambar desa evan.jpg");
+    background-image: url("../src/images/nigel-tadyanehondo-KL1cEgQoFwc-unsplash.jpg");
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
@@ -63,15 +137,128 @@ a {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    font-family: "Poppins";
+
 
     .title {
-        font-size: 200px;
-        color: var(--second-color);
+        font-size: 10vw;
+        color: var(--white-color);
     }
 
     .subtitle {
-        color: var(--second-color);
+        font-size: 3vw;
+        color: var(--white-color);
     }
-
 }
 
+.services {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    
+    .lists {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.about {
+    background-color: var(--white-smoke-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        width: 455px;
+        gap: 35px;
+
+        .about-title {
+            font-size: 40px;
+            font-weight: 700;
+            width: fit-content;
+        }
+
+        .about-description {
+            font-size: 18px;
+            width: 500px;
+        }
+    }
+    .village-images {
+        align-items: center;
+        justify-content: center;
+
+        .bg-villages {
+            width: 500px;
+            height: 500px;
+            background-size: contain;
+            background-repeat: cover;
+            border-radius: 8px;
+        }
+    }
+}
+
+.footer {
+    width: auto;
+    height: 400px;
+    background-color: #66b58e;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 200px;
+    padding-inline: 100px;
+    border-radius: 100px 100px 0 0;
+    font-family: 'Public Sans';
+
+    .content-container {
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: baseline;
+        gap: 75px;
+    }
+
+    .social-container{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .links-container {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .title {
+        width: 100%;
+        padding-block-end: 10px;
+    }
+
+    .list-content {
+        font-size: 13px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 7px;
+    }
+}
